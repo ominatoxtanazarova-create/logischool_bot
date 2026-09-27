@@ -934,6 +934,31 @@ if render_url:
     bot.set_webhook(url=webhook_url)
 
 port = int(os.getenv("PORT", 10000))
+@app.route("/", methods=["GET"])
+def home_page():
+    return "LogiSchool bot ishlayapti!"
+
+
+@app.route("/webhook", methods=["POST"])
+def webhook():
+    json_string = request.get_data().decode("utf-8")
+    update = telebot.types.Update.de_json(json_string)
+    bot.process_new_updates([update])
+    return "OK"
+app.run(
+    host="0.0.0.0",
+    port=port
+)
+init_db()
+
+render_url = os.getenv("RENDER_EXTERNAL_URL")
+
+if render_url:
+    webhook_url = render_url + "/webhook"
+    bot.remove_webhook()
+    bot.set_webhook(url=webhook_url)
+
+port = int(os.getenv("PORT", 10000))
 
 app.run(
     host="0.0.0.0",
