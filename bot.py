@@ -5,6 +5,9 @@ from datetime import datetime
 import telebot
 from telebot import types
 
+from flask import Flask, request
+
+app = Flask(__name__)
 
 # =========================
 # SOZLAMALAR
