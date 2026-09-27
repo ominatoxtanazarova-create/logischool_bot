@@ -923,13 +923,16 @@ def home(message):
 
 init_db()
 
+render_url = os.getenv("RENDER_EXTERNAL_URL")
 
-# =========================
-# ISHGA TUSHIRISH
-# =========================
+if render_url:
+    webhook_url = render_url + "/webhook"
+    bot.remove_webhook()
+    bot.set_webhook(url=webhook_url)
 
-print("LogiSchool bot ishga tushdi!")
+port = int(os.getenv("PORT", 10000))
 
-bot.infinity_polling(
-    skip_pending=True
+app.run(
+    host="0.0.0.0",
+    port=port
 )
