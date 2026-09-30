@@ -728,9 +728,9 @@ def approve_payment(call):
         "✅ Tasdiqlandi!"
     )
 
-    bot.send_message(
-        user_id,
-        f"""
+   bot.send_message(
+    user_id,
+    f"""
 🎉 TABRIKLAYMIZ!
 
 ✅ To'lovingiz tasdiqlandi.
@@ -738,8 +738,12 @@ def approve_payment(call):
 🎓 Siz {COURSE_NAME} kursiga qabul qilindingiz.
 
 🔥 Xush kelibsiz!
+
+📚 Kurs guruhiga qo'shilish:
+👇
+{COURSE_GROUP_LINK}
 """
-    )
+)
 
 
 # =========================
