@@ -741,7 +741,7 @@ def approve_payment(call):
 
 📚 Kurs guruhiga qo'shilish:
 👇
-{COURSE_GROUP_LINK}
+{https://t.me/+HXubr3jrdNBjMzky}
 """
 )
 
