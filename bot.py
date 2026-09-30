@@ -12,7 +12,7 @@ app = Flask(__name__)
 # =========================
 # SOZLAMALAR
 # =========================
-COURSE_GROUP_LINK = "https://t.me/+HXubr3jrdNBjMzky"
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 ADMIN_ID = 6470817755
@@ -24,7 +24,7 @@ OLD_PRICE = "300 000 so'm"
 COURSE_PRICE = "200 000 so'm"
 
 CARD_NUMBER = "9860190105962889"
-
+COURSE_GROUP_LINK = "https://t.me/+HXubr3jrdNBjMzky"
 DB_NAME = "logischool.db"
 
 
