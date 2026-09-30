@@ -728,7 +728,7 @@ def approve_payment(call):
         "✅ Tasdiqlandi!"
     )
 
-      bot.send_message(
+        bot.send_message(
         user_id,
         f"""
 🎉 TABRIKLAYMIZ!
@@ -743,8 +743,7 @@ def approve_payment(call):
 👇
 {COURSE_GROUP_LINK}
 """
-    
-)
+    )
 
 
 # =========================
